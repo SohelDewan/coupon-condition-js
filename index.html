@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Js Coupon Condition</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="mx-auto container">
+      <nav>
+        <div class="navbar bg-base-100">
+          <div class="navbar-start">
+            <div class="dropdown">
+              <div tabindex="0" role="button" class="btn btn-ghost btn-circle">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 6h16M4 12h16M4 18h7"
+                  />
+                </svg>
+              </div>
+              <ul
+                tabindex="0"
+                class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+              >
+                <li><a>Homepage</a></li>
+                <li><a>Portfolio</a></li>
+                <li><a>About</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="navbar-center">
+            <a class="btn btn-ghost text-xl">Players Selection</a>
+          </div>
+          <div class="navbar-end">
+            <button class="btn btn-ghost btn-circle">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                />
+              </svg>
+            </button>
+            <button class="btn btn-ghost btn-circle">
+              <div class="indicator">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"
+                  />
+                </svg>
+                <span
+                  class="badge badge-xs badge-primary indicator-item"
+                ></span>
+              </div>
+            </button>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div
+        class="menu-container container mx-auto p-6 text-3xl font-bold flex justify-between bg-slate-400 text-white rounded-lg"
+      >
+        <h3>Budget: <span id="budget" class="price-color">2500</span>$</h3>
+        <h3>Cart: <span id="cart" class="price-color">0</span></h3>
+        <h3>Remain: <span id="remain" class="price-color">6</span></h3>
+      </div>
+      <!-- players section -->
+      <section class="mx-auto container mt-8">
+        <div class="main-container flex gap-5 lg:gap-20 font-bold">
+          <div class="players-container grid gap-6 lg:grid-cols-3">
+            <div class="card w-48 bg-primary text-primary-content">
+              <div class="card-body player-btn">
+                <h2 class="card-title">Tamim Iqbal</h2>
+                <h5>Price: <span>300</span>$</h5>
+                <h5>Category: <span>Bat</span></h5>
+                <div class="card-actions">
+                  <button class="btn add-btn">Add to cart</button>
+                </div>
+              </div>
+            </div>
+            <div class="card w-48 bg-primary text-primary-content">
+              <div class="card-body player-btn">
+                <h2 class="card-title">Sakib</h2>
+                <h5>Price: <span>300</span>$</h5>
+                <h5>Category: <span>Bat+Ball</span></h5>
+                <div class="card-actions">
+                  <button class="btn add-btn">Add to cart</button>
+                </div>
+              </div>
+            </div>
+            <div class="card w-48 bg-primary text-primary-content">
+              <div class="card-body player-btn">
+                <h2 class="card-title">Musfiq</h2>
+                <h5>Price: <span>200</span>$</h5>
+                <h5>Category: <span>Bat + keeper</span></h5>
+                <div class="card-actions">
+                  <button class="btn add-btn">Add to cart</button>
+                </div>
+              </div>
+            </div>
+            <div class="card w-48 bg-primary text-primary-content">
+              <div class="card-body player-btn">
+                <h2 class="card-title">Liton</h2>
+                <h5>Price: <span>100</span>$</h5>
+                <h5>Category: <span>Bat</span></h5>
+                <div class="card-actions">
+                  <button class="btn add-btn">Add to cart</button>
+                </div>
+              </div>
+            </div>
+            <div class="card w-48 bg-primary text-primary-content">
+              <div class="card-body player-btn">
+                <h2 class="card-title">Shanto</h2>
+                <h5>Price: <span>250</span>$</h5>
+                <h5>Category: <span>Bat</span></h5>
+                <div class="card-actions">
+                  <button class="btn add-btn">Add to cart</button>
+                </div>
+              </div>
+            </div>
+            <div class="card w-48 bg-primary text-primary-content">
+              <div class="card-body player-btn">
+                <h2 class="card-title">Mustafiz</h2>
+                <h5>Price: <span>400</span>$</h5>
+                <h5>Category: <span>Baller</span></h5>
+                <div class="card-actions">
+                  <button class="btn add-btn">Add to cart</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="cart-container w-2/7">
+            <h2 class="text-2xl lg:text-5xl text-center">My Cart</h2>
+            <br />
+            <hr />
+            <br />
+            <div
+              class="selected-player uppercase flex justify-between gap:6 lg:gap-36 mb-5"
+            >
+              <div class="name">name</div>
+              <div class="category">category</div>
+              <div class="price text-start">price</div>
+            </div>
+            <hr />
+            <div id="selected-players-container" class="uppercase  text-center mb-5"></div>
+            <hr />
+            <h3 class="padding text-2xl lg:text-3xl text-end my-4">
+              Total Cost: <span id="total-cost">0</span>$
+            </h3>
+            <hr />
+            <div class="coupon-code py-4 text-center">
+              <input
+              id="coupon-code"
+                type="text"
+                class="p-4"
+                placeholder="coupon-code"
+              />
+              <button
+              id="apply-btn"
+                onclick="updateGrandTotal('apply-btn')"
+                class="btn apply-btn pl-2"
+              >
+                Apply
+              </button>
+            </div>
+            <hr />
+            <h3 class="padding text-2xl lg:text-3xl text-end">
+              Grand Total: <span id="grand-total">0</span>$
+            </h3>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer></footer>
+
+    <!-- <script src="app.js"></script> -->
+    <script src="test.js"></script>
+  </body>
+</html>
